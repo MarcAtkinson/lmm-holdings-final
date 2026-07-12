@@ -85,7 +85,7 @@ export default function PlatformPage() {
               <div className="stagePartners">
                 {stage.partners.map(([logo,name])=>(
                   <div className="stagePartner" key={name}>
-                    {logo ? <img src={logo} alt={name}/> : <div className="textLogo">{name}</div>}
+                    {logo ? <img src={logo ?? undefined} alt={name} /> : <div className="textLogo">{name}</div>}
                     <span>{name}</span>
                   </div>
                 ))}
